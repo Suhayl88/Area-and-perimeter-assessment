@@ -1,19 +1,25 @@
-import pandas
+import pandas as pd
 
-# dictionaries to hold calculation details
-all_shapes = ["a", "b", "c", "d"]
-all_dimensions = [7.50, 7.50,10.50,10.50]
-all_Perimeter = [0, 0, 0.53, 0]
-all_Area = [0, 0, 0.53, 0]
-
+# Dictionaries to hold calculation details
+problem_shapes = [0.75,0.75,0.75,0.75,0.75]
+problem_dimensions = [0.5,0.5,0.5,0.5,0.5]
+problem_perimeter = [1,2,3,4,5]
+problem_area = [0.4,0.5,0.6,0.7,0.8]
 base_dict = {
-    "Shapes": all_shapes,
-    "Dimensions": all_dimensions,
-    "Perimeter": all_Perimeter,
-    "Area": all_Area
+    "Shapes": problem_shapes,
+    "Dimensions": problem_dimensions,
+    "Perimeter": problem_perimeter,
+    "Area": problem_area
 }
 
-base_frame = pandas.DataFrame(base_dict)
+while True:
+    # Create DataFrame to store calculation results
+    base_frame = pd.DataFrame(base_dict)
 
-# output table within Shape data
+
+base_frame = pd.DataFrame(base_dict)
+
+# Output the table with Shape data
 print(base_frame)
+
+
