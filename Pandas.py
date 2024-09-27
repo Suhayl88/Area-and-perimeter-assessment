@@ -19,6 +19,12 @@ while True:
 
 base_frame = pd.DataFrame(base_dict)
 
+# table calculation
+problem_shapes.append(shape_choice)
+problem_dimensions.append(dimension)
+problem_area.append(area)
+problem_perimeter.append(perimeter)
+
 # Output the table with Shape data
 print(base_frame)
 

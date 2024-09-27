@@ -48,14 +48,14 @@ def circle_choice_checker(radius):
     circumference = 2 * math.pi * radius
     return area, circumference
 
-
+# triangle calculation
 def triangle_choice_checker(a, b, c):
     s = (a + b + c) / 2
     area = math.sqrt(s * (s - a) * (s - b) * (s - c))
     perimeter = a + b + c
     return area, perimeter
 
-
+# rectangle calculation
 def rectangle_choice_checker(length, width):
     area = length * width
     perimeter = 2 * (length + width)
@@ -90,7 +90,7 @@ base_dict = {
 want_instructions = yes_no("\nDo you want to read the instructions? ").lower()
 if want_instructions == "yes":
     print("If you choose square, you will receive perimeter and area."
-          "\nIf you choose circle, you will receive the area and the circumference."
+          "\nIf you choose circle, you will receive the area and the circumference / perimeter."
           "\nIf you choose triangle, we assume you have 3 sides."
           "\nIf you choose rectangle, you will receive both area and perimeter.")
     print()
@@ -133,9 +133,9 @@ while True:
         print("It's a circle")
         radius = num_check("\nEnter the radius of the circle: ")
         area = math.pi * radius ** 2
-        circumference = 2 * math.pi * radius
+        perimeter = 2 * math.pi * radius
         print(f"Area of the circle: {area}\n")
-        print(f"circumference of the circle {circumference}\n")
+        print(f"perimeter of the circle {perimeter}\n")
         dimension = f"Radius: {radius}"
 
     # Triangle Calculation
@@ -153,8 +153,8 @@ while True:
     # Rectangle Calculation
     elif shape_choice == "rectangle":
         print("\nIt's a rectangle")
-        length = num_check("\nEnter the length of the rectangle: ")
-        width = num_check("\nEnter the width of the rectangle: ")
+        length = num_check("\nEnter the height of the rectangle: ")
+        width = num_check("\nEnter the base width of the rectangle: ")
         area = length * width
         perimeter = 2 * (length + width)
         print("\nArea = ", area)
